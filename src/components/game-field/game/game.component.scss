@@ -1,0 +1,8 @@
+
+.game-canvas{
+	position: relative;
+	box-shadow: 0 0 10px 2px rgba(90,59,59,.562);
+	border-radius: 5px;
+	z-index: 20;
+	cursor: url(../../../assets/img/aim50.png), url(../../../assets/img/aim50.png) 25 25, default;
+}

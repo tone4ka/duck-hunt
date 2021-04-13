@@ -1,0 +1,94 @@
+@font-face {
+  font-family: Birch;
+  src: url(../../assets/font/birchctt.ttf);
+}
+
+
+.duck-aim {
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+
+.aim {
+  position: fixed;
+}
+
+.animation-bullet{
+  position: fixed;
+  top : 50%;
+  transform: translate(0, -15%);
+}
+
+.svg-animation-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 559px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#svg-button {
+  font-size: 45px;
+  font-weight: 900;
+  color: rgba(46, 13, 103, 1);
+  font-family: 'Birch';
+  pointer-events: none;
+  background-color: rgba(0, 0, 0 , 0);
+  letter-spacing: -0.1em;
+}
+
+#bullet-container {
+  width: 300px;
+  height: 113px;
+  position: relative;
+}
+
+.bullet-empty {
+  position: absolute;
+  width: 300px;
+  height: 113px;
+  top: 0;
+  left: 0;
+  background-image: url('../../assets/img/bullet_10.png');
+  z-index: 99;
+}
+
+.bullet {
+  width: 300px;
+  height: 113px;
+  mask-image: url('../../assets/img/bullet_100.png');
+  position: absolute;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+@keyframes ink {
+  0% {left: -130%}
+  20% {left: -120%}
+  50% {left: -100%}
+  75% {left: -50%}
+  100% {left: -34%}
+}
+
+.ink-canvas {
+  width: 395px;
+  height: 395px;
+  background-image: url('../../assets/img/bullet_ink.png');
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -34%;
+  animation: ink 2.5s;
+}
+
+.end-loading {
+  pointer-events: auto !important;
+}

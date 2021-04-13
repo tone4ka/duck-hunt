@@ -1,0 +1,72 @@
+@font-face {
+  font-family: Birch;
+  src: url(../../assets/font/birchctt.ttf);
+}
+
+#modal-window {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 250px;
+  height: auto;
+  text-align: center;
+  background: url('../../assets/img/paper-cell.jpg');
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.75);
+  vertical-align: middle;
+  font-family: Birch;
+  font-size: 25px;
+  font-weight: 900;
+  color: rgba(46, 13, 103, 1);
+  text-transform: uppercase;
+}
+
+#modal-window::before {
+  display: inline-block;
+  height: 100%;
+  content: '';
+  vertical-align: middle;
+}
+
+#cover-div {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.55;
+}
+
+#to-main {
+  width:85.5%;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px auto;
+  padding: 12px 40px;
+  cursor: pointer;
+  font-size: 21px;
+  color: rgba(46, 13, 103, 1);
+  font-weight: 900;
+  line-height: 24px;
+  border: 2px solid rgba(101, 81, 132, 1);
+  border-radius: 5px;
+  user-select: none;
+  box-sizing: border-box;
+  opacity: 0.8;
+  background: url('../../assets/img/paper-cell.jpg');
+  font-family: Birch;
+}
+
+#to-main:hover {
+  transform: scale(1.05);
+}
+
+.modal-perfect-hidden,
+.modal-game-over-hidden {
+  display: none;
+}

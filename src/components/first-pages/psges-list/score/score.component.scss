@@ -1,0 +1,46 @@
+ .score{
+    display: flex;
+    position: relative;
+    transition: all 0.2s;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 2px rgba(90, 59, 59, 0.562);
+    border-radius: 5px;
+    .bullet-box,
+    .point-box,
+    .total-box{
+        display: flex;
+        position: relative;
+        left: -200%;
+        height: 30%;
+        transition: all 1s;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+    .point-box{
+        margin-top: 7px!important;
+    }
+    .bullet-box{
+        justify-content: flex-start;
+    }
+    .total-box{
+        justify-content: flex-end;
+    }
+    img{
+        transition: all .5s;
+        width: 40px;
+        height: 16px;
+        margin: 1px 0;
+    }
+    .img-duck-popadanie{
+        height: 39.4px !important;
+    }
+    .img-duck-conture{
+        height: 36px !important;
+    }
+}   

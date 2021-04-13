@@ -1,0 +1,29 @@
+
+// general btn
+.game-btn{
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/button_slim.png);
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+   
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px auto;
+    padding: 20px 80px;
+    cursor: pointer;
+    font-size: 21px;
+    line-height: 24px;
+    border-radius: 5px;
+    user-select: none;
+    box-sizing: border-box;
+    opacity: 0.8;
+}
+.game-btn:hover{
+    transform: scale(1.05);
+    transition: .1s;
+}
+.game-btn:active{
+    transform: scale(1);
+}

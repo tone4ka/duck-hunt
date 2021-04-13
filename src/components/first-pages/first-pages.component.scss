@@ -1,0 +1,286 @@
+
+$Color1: #2e0d67; //text color
+$Color: black; //footer, year color, bg git logo
+
+@font-face {
+    font-family: Birch;
+    src: url(../../assets/font/birchctt.ttf);
+}
+
+body{
+    // заменить??
+    background-image: url(../../assets/img/paper-cell.jpg);
+    background-position: center;
+    user-select: none;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    font-family: Birch;
+    color: $Color1;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    font-weight: 600;
+
+    position: relative;
+    overflow: hidden;
+
+    background-image: url(../../assets/img/paper-cell.jpg);
+    background-position: center;
+    border-right: 2px solid #00000048;
+    border-left: 2px solid #00000048;
+        
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .header,
+    .footer{
+        display: flex;
+        min-height: 10vh;
+    }
+    .header{
+        .content{
+            align-items: center;
+            padding: 0 10px;
+            justify-content: space-between;
+        }
+        h1{
+            font-size: 32px;
+            line-height: 34px;
+            width: 30%;
+            padding-left: 15px;
+        }
+        .pages{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            width: 30%;
+            text-transform: uppercase;
+        }
+      
+        .pause-btn{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 30%;
+
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                height: 100%;
+                width:55px;
+                
+                margin-right: 10px;
+                position: relative;
+                .help{
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 80%;
+                    right: 5%;
+                    z-index: 50;
+
+                    min-width: 200px;
+                    padding: 10px;
+                    border-radius: 2px;
+                    background: rgba(240, 255, 255, 0.404);
+                }
+                .user-img{
+                    position: relative;
+                    height: 50px;
+                    width: 50px;
+                    cursor: pointer;
+                }
+            }
+            .user:hover .help{
+                display: flex;
+            }
+            .user:hover .user-img{
+                animation: logo-rotate 1 linear .8s;
+            }
+        }
+    }
+
+
+    .main{
+        display: flex;
+        min-height: 80vh;
+        align-items: center;
+
+        .content{
+            position: relative;
+            justify-content: center;
+            flex-wrap: nowrap;
+
+            .game-menu{
+                position: relative;
+            }
+            .game-place{
+                position: absolute;
+            }
+
+            .game-place,
+            .game-menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                overflow: hidden;
+
+                width: 100%;
+                min-height: 80vh;
+                top: 0;
+                left: 0;
+            }
+        }   
+    }
+
+
+    .footer{
+        margin-top: auto;
+        .content{
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-box{
+            display: flex;
+            align-items: center;
+            border-radius: 9px;
+
+             .rs-logo{
+                 padding: 0 2px;
+                height: 30px;
+                width: 50px;
+            }
+        }
+
+        .git-logo{
+            height: 15px;
+            width: 15px;
+            margin-right: 5px;
+            background-color: $Color;
+            border-radius: 50%;
+        }
+        .autor{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            li{
+                display: flex;
+                align-items: center;
+            }
+            .autor-Name{
+                display: flex;
+                align-items: center;
+                margin: 10px;
+                color: $Color1;
+            }
+            .autor-Name:hover{    
+                transform: scale(0.95);
+                transition: all .3s ;
+            }
+        }
+        .year{
+            display: flex;
+            padding: 0px 2px;
+            align-items: center;
+            color: $Color;
+        }
+    }
+}
+
+// .logged{
+// 	filter: hue-rotate(180deg);
+// }
+// .not-logged{
+// 	filter: invert(100%);
+// }
+// animation
+@keyframes logo-rotate{
+    25%{
+        transform: rotate(20deg);
+    }
+    50%{
+        transform: rotate(-40deg);
+    }
+    75%{
+        transform: rotate(20deg);
+    }
+    90%{
+        transform: rotate(-10deg);
+    }
+}
+
+@media all and (max-height: 697px) {
+    .wrapper{
+        font-size: 16px;
+        line-height: 18px;
+        h1{
+            font-size: 25px !important;
+            line-height: 28px !important;
+        }
+        .header{
+            .pause-btn-header{
+                padding: 5px 20px;
+                background-position: center;
+            }
+            .user-img{
+                height: 30px !important;
+                width: 30px !important;
+            }
+        }
+        .header,
+        .footer{
+            min-height: 5vh;
+        }
+        .main{
+            min-height: 90vh;
+            .content{
+                min-height: 90vh;
+                .game-place,
+                .game-menu{
+                    min-height: 90vh; 
+                }
+            }
+        }
+        .footer{
+            .autor{
+                a{
+                    font-size: 15px;
+                    line-height: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1150px) {
+    .wrapper{
+        .footer{
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media all and (max-width: 1150px) {
+    .wrapper{
+        .footer{
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+}

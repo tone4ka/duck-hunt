@@ -1,0 +1,95 @@
+audio {
+  display: none;
+}
+
+.audio-container {
+  text-align: center;
+}
+
+.audio-container span {
+	padding: 0 10px;
+}
+
+.volume-container,
+.panner-container {
+  display: flex;
+}
+
+.input-slider {
+  -webkit-appearance: none;
+  width: 119px;
+  height: 5px;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-top: 10px;
+  margin-bottom: 39px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #2e0d67;
+  border-radius: 2px;
+  border: 0.2px solid #2e0d67;
+}
+ 
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #2e0d67;
+}
+ 
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #2e0d67;
+  border-radius: 2px;
+  border: 0.2px solid #010101;
+}
+ 
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #2be9a0;
+  border-radius: 1.5px;
+  border: 0.2px solid #010101;
+}
+
+//  styles for handlebar
+// WebKit/Blink
+.input-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background-image: url(../../assets/img/aim.png);
+  background-size: contain;
+  cursor: pointer;
+  margin-top: -19.5px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+// Firefox
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background-image: url(../../assets/img/aim.png);
+  background-size: contain;
+  cursor: pointer;
+}
+ 
+IE
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background-image: url(../../assets/img/aim.png);
+  background-size: contain;
+  cursor: pointer;
+}

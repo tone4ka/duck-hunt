@@ -1,0 +1,85 @@
+$color-error-message: brown;
+$color-lines:#2e0d67;
+
+
+.statistic-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../../../../assets/img/paper-cell.jpg);
+    height: 80%; 
+    background-position: center;
+    padding: 80px 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+    position: relative;
+    right: -90%;
+		transition: all .3s;
+
+		.stat-switcher{
+			display: flex;
+			//border: 1px solid black;
+			flex-direction: row;
+			.stat-tab {
+				border: 2px solid $color-lines;
+				border-bottom: none;
+				padding: 5px 10px;
+				//margin-bottom: 5px;
+				border-radius: 10px 10px 0 0 ;
+				
+			}
+		}
+
+.statistic-table-wrapper{
+	min-width: 546px;
+	.stat-table{
+		border: 2px solid $color-lines	;
+		width: 100%;
+		margin-bottom: auto;
+}
+.stat-message{
+	min-height: 20px;
+	margin: 0 auto ;
+	color: $color-error-message;
+}
+}
+    
+
+
+    .info-btn{
+        display: flex;
+        flex-wrap: wrap;
+        div{
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            padding: 8px 25px !important;
+            font-size: 10px;
+            line-height: 10px;
+        }
+    }
+}
+.hided{
+	display: none;
+	visibility: hidden;
+}
+.selected{
+	position: relative;
+		color: brown;
+		&::after{
+			content: "";
+			position: absolute;
+			bottom: 5px;
+			left: 0;
+			width: 90%;
+			height: 3px;
+			background-color: brown;
+			right: 0;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+.disabled{
+	pointer-events: none;
+	color: grey;
+}
