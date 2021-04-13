@@ -1,0 +1,37 @@
+{
+    "name": "rsclone-backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "server": "nodemon app.js",
+        "client": "npm run dev --prefix ../",
+        "dev": "concurrently \"npm run server\" \"npm run client\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Nimlu-bot/rsclone-backend.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Nimlu-bot/rsclone-backend/issues"
+    },
+    "homepage": "https://github.com/Nimlu-bot/rsclone-backend#readme",
+    "dependencies": {
+        "bcrypt": "^5.0.0",
+        "bcryptjs": "^2.4.3",
+        "config": "^3.3.3",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "express-validator": "^6.9.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.11.8",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "concurrently": "^5.3.0",
+        "nodemon": "^2.0.6"
+    }
+}

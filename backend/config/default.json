@@ -1,0 +1,5 @@
+{
+  "port": 4000,
+  "jwtSecret": "secret key",
+  "mongoUri": "mongodb+srv://rsclone:rsclonepassword@cluster0.zvycq.mongodb.net/app?retryWrites=true&w=majority"
+}
